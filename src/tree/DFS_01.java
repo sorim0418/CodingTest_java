@@ -18,8 +18,7 @@ class DFS_01 {
     public static String preOrder(int index) {
         if (index >= size) return ""; // 종료 조건
 
-        String result = String.valueOf(node[0].charAt(index)); //현재노드 방문 -> 부모
-        //result += preOrder(index); // 현재노드를 재귀로 하지 않는 이유 -> 무한루프 발생
+        String result = String.valueOf(node[0].charAt(index)); //현재노드 방문 -> 부모ad
         result += preOrder(index * 2); // 왼쪽 방문 (재귀 호출)
         result += preOrder((index * 2) + 1); // 오른쪽 방문 (재귀 호출)
 
